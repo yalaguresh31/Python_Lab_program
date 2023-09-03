@@ -12,4 +12,4 @@ with open(file_name, "r") as f:
 with open(file_name, "r") as f: 
     content = f.read()
     count = content.count(word)
-print("The word '{word}' appears {count} times in the file.") #this line problem
+print(f"The word '{word}' appears {count} times in the file.") #this line problem
