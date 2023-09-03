@@ -1,0 +1,9 @@
+{
+    "location" : "c:tyName",
+    "temprature" : 25,
+    "weather" : "sunny",
+    "humidity" : 60,
+    "wind_speed" : 10,
+    "temp_min" : 20.0,
+    "temp_max" : 24.0
+}
