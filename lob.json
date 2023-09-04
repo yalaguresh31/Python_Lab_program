@@ -1,6 +1,5 @@
 {
     "location" : "ujire",
-    "temprature" : 25,
     "weather" : "sunny",
     "humidity" : 60,
     "wind_speed" : 10,
