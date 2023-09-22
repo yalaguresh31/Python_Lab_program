@@ -5,9 +5,11 @@
 class Palindrome:
     def is_palindrome(self, input):
         pass
+
 class StringPalindrome(Palindrome):
     def is_palindrome(self, input):
         return input == input[::-1]
+        
 class IntegerPalindrome(Palindrome):
     def is_palindrome(self, input):
         return str(input) == str(input)[::-1]

@@ -14,10 +14,13 @@ for comic_num in range(latest_comic, 0, -1):
     response = requests.get(url)
     response.raise_for_status()
     comic_data = response.json()
+
     image_url = comic_data['img']
     response = requests.get(image_url)
     response.raise_for_status()
+
     file_name = os.path.basename(image_url)
+    
     with open(f'xkcd/{file_name}', 'wb') as image_file:
         for chunk in response.iter_content(100000):
             image_file.write(chunk)

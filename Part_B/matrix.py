@@ -1,40 +1,59 @@
 
 import numpy as np
 
-# Read matrix dimensions MxN
-M = int(input("Enter the number of rows (M): "))
-N = int(input("Enter the number of columns (N): "))
+def matrix(m,n):
+    M = []
+    for i in range(m):
+        row = []
+        for j in range(n):
+            element = int(input(f"Enter element at position ({i+1},{j+1}): "))
+            row.append(element)
+        M.append(row)
+    return M
 
-# Initialize matrices
-matrix1 = []
-matrix2 = []
+def matrix_add(A,B):
+    sum = []
+    for i in range(len(A)): #Number of rows
+        row = []
+        for j in range(len(A[0])): #number of columns
+            row.append(A[i][j] + B[i][j])
+        sum.append(row)
+    return sum
 
-# Read matrix elements
-print("Enter elements of matrix 1:")
-for i in range(M):
-    row = []
-    for j in range(N):
-        row.append(float(input(f"Enter element at position ({i+1},{j+1}): ")))
-    matrix1.append(row)
+def matrix_product(A,B):
+    C = []
+    for i in range(len(A)):
+        row = []
+        for j in range(len(A[0])):
+            Product = 0
+            for k in range(len(A[0])):
+                Product = Product + A[i][k] * B[k][j]
+            row.append(Product)
+        C.append(row)
+    return C
+    
+def matrix_formt(matrix):
+    for i in range(len(matrix)):
+        for j in range(len(matrix[0])):
+            print(matrix[i][j],end = " ")
+        print()
+
+m = int(input("Enter the number of rows (m):"))
+n = int(input("Enter the number of columns (n):"))
+
+print("Enter elements of matrix A:")
+A = matrix(m,n)
+matrix_formt(A)
 
 print("Enter elements of matrix 2:")
-for i in range(M):
-    row = []
-    for j in range(N):
-        row.append(float(input(f"Enter element at position ({i+1},{j+1}): ")))
-    matrix2.append(row)
+B = matrix(m,n)
+matrix_formt(B)
 
-# Addition of two matrices
-result_addition = np.add(matrix1, matrix2)
+print("The addition of matrix is : ")
+add = matrix_add(A,B)
+matrix_formt(add)
 
-# Product of two matrices
-result_product = np.dot(matrix1, matrix2)
+print("The Product of matrix is : ")
+result = matrix_product(A,B)
+matrix_formt(result)
 
-print("Matrix 1:")
-print(np.array(matrix1))
-print("Matrix 2:")
-print(np.array(matrix2))
-print("Matrix Addition:")
-print(result_addition)
-print("Matrix Product:")
-print(result_product)

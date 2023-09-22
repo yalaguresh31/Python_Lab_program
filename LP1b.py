@@ -19,7 +19,7 @@ for i in range(0,10):
     while temp1 > 0:
         digit = temp1 % 10
         if digit == i:
-            count = count + 1
+            count = count + 13
         temp1 = temp1 // 10
     if count > 0:
         print(i, "\t", count)

@@ -1,9 +1,11 @@
 # 7)A) By using the concept of inheritance write a python program to find the area of triangle, circle and rectangle.
 
 import math
+
 class Shape:
  def area(self,s):
     print("area of ",s,end = ":")
+
 class Triangle(Shape):
  def __init__(self, base, height):
     self.base = base
