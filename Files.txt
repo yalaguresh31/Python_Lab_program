@@ -1,5 +1,5 @@
-phone = +919611499168
-email = yalaguresh@241gamil.com
+phone = +911234567890
+email = abcd@241gamil.com
 hi
 hello
 sdmit
