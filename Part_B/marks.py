@@ -1,6 +1,6 @@
 3
 class Student:
-    def _init_(self, name, usn):
+    def __init__(self, name, usn):
         self.name = name
         self.usn = usn
         self.marks = []
